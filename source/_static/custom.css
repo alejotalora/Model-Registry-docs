@@ -1,0 +1,130 @@
+/* =========================================================
+   Database Overview Cards
+   ========================================================= */
+
+.database-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.database-card {
+    display: block;
+    padding: 20px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    background: #ffffff;
+    text-decoration: none !important;
+    color: #2c3e50 !important;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.database-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+}
+
+.database-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #2c5282;
+}
+
+.database-card p {
+    margin-bottom: 8px;
+}
+
+.database-card .explore {
+    margin-bottom: 0;
+    font-weight: 600;
+    color: #2c5282;
+}
+
+.database-card.full-erd {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   Responsive Database Cards
+   ========================================================= */
+
+@media (max-width: 800px) {
+    .database-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .database-card.full-erd {
+        grid-column: auto;
+    }
+}
+
+
+/* =========================================================
+   STAMM Branding
+   ========================================================= */
+
+.sphinxsidebarwrapper p.logo img {
+    max-width: 160px !important;
+    width: 160px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.sphinxsidebarwrapper {
+    padding-top: 20px;
+}
+
+.sphinxsidebarwrapper h1.logo {
+    display: none;
+}
+
+
+/* =========================================================
+   Sphinx Tables
+   ========================================================= */
+
+table.docutils {
+    max-width: 100%;
+}
+
+table.docutils th,
+table.docutils td {
+    vertical-align: top;
+}
+
+
+/* =========================================================
+   Environment Variable Tables
+   ========================================================= */
+
+table.env-table {
+    width: max-content;
+    min-width: 100%;
+    table-layout: auto;
+    margin-bottom: 24px;
+}
+
+table.env-table th,
+table.env-table td {
+    vertical-align: top;
+    white-space: normal;
+    overflow-wrap: normal;
+}
+
+table.env-table td code,
+table.env-table th code {
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   Main Documentation Content
+   ========================================================= */
+
+.document h1 {
+    margin-top: 0;
+}
