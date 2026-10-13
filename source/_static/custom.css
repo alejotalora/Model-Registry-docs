@@ -1,4 +1,149 @@
 /* =========================================================
+   Global Layout
+   ========================================================= */
+
+div.document {
+    width: 96% !important;
+    max-width: 1800px;
+    margin: 24px auto 0 auto !important;
+}
+
+div.documentwrapper,
+div.bodywrapper {
+    min-width: 0;
+}
+
+div.body {
+    min-width: 0;
+    max-width: none;
+}
+
+
+/* =========================================================
+   Global Typography
+   ========================================================= */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Arial, Helvetica, sans-serif !important;
+    font-size: 17px !important;
+    line-height: 1.65;
+}
+
+/* Main documentation text */
+
+div.body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Arial, Helvetica, sans-serif !important;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+div.body p,
+div.body li,
+div.body dd {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Main page title */
+
+div.body h1 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Arial, Helvetica, sans-serif !important;
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-top: 0.25em;
+    margin-bottom: 0.65em;
+}
+
+/* Section titles */
+
+div.body h2 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Arial, Helvetica, sans-serif !important;
+    font-size: 1.65rem;
+    font-weight: 400;
+    line-height: 1.35;
+    margin-top: 1.4em;
+    margin-bottom: 0.6em;
+}
+
+div.body h3 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Arial, Helvetica, sans-serif !important;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+div.body h4,
+div.body h5,
+div.body h6 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Arial, Helvetica, sans-serif !important;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+/* Code typography */
+
+div.body code,
+div.body tt,
+div.body pre {
+    font-family: Consolas, "Cascadia Code", "Courier New", monospace;
+}
+
+div.body code,
+div.body tt {
+    font-size: 0.88em;
+}
+
+div.body pre {
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   Sidebar Typography
+   ========================================================= */
+
+div.sphinxsidebar {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Arial, Helvetica, sans-serif !important;
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+div.sphinxsidebar h1,
+div.sphinxsidebar h2,
+div.sphinxsidebar h3,
+div.sphinxsidebar h4 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Arial, Helvetica, sans-serif !important;
+    font-weight: 400;
+    line-height: 1.35;
+}
+
+div.sphinxsidebar h3 {
+    font-size: 1.35rem;
+}
+
+div.sphinxsidebar p,
+div.sphinxsidebar li,
+div.sphinxsidebar a {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Arial, Helvetica, sans-serif !important;
+}
+
+div.sphinxsidebar a {
+    line-height: 1.5;
+}
+
+
+/* =========================================================
    Database Overview Cards
    ========================================================= */
 
@@ -30,10 +175,13 @@
     margin-top: 0;
     margin-bottom: 10px;
     color: #2c5282;
+    font-size: 1.2rem;
 }
 
 .database-card p {
     margin-bottom: 8px;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 .database-card .explore {
@@ -44,21 +192,6 @@
 
 .database-card.full-erd {
     grid-column: 1 / -1;
-}
-
-
-/* =========================================================
-   Responsive Database Cards
-   ========================================================= */
-
-@media (max-width: 800px) {
-    .database-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .database-card.full-erd {
-        grid-column: auto;
-    }
 }
 
 
@@ -85,6 +218,7 @@
 
 /* =========================================================
    Sphinx Tables
+   Preserve all existing table structures.
    ========================================================= */
 
 table.docutils {
@@ -127,4 +261,487 @@ table.env-table th code {
 
 .document h1 {
     margin-top: 0;
+}
+
+
+/* =========================================================
+   Responsive Page Layout
+   ========================================================= */
+
+@media (max-width: 875px) {
+    div.document {
+        width: 100% !important;
+        max-width: none;
+        margin-top: 0 !important;
+    }
+
+    div.body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    div.body h1 {
+        font-size: 1.9rem;
+    }
+
+    div.body h2 {
+        font-size: 1.5rem;
+    }
+
+    .database-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .database-card.full-erd {
+        grid-column: auto;
+    }
+
+    div.sphinxsidebar {
+        position: static;
+        max-height: none;
+        overflow: visible;
+    }
+}
+
+
+/* =========================================================
+   Model Registry Homepage Cover
+   ========================================================= */
+
+img.model-registry-cover {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 28px auto 36px auto;
+}
+
+
+/* =========================================================
+   Keep the Sidebar Visible While Scrolling
+   ========================================================= */
+
+@media (min-width: 876px) {
+    div.sphinxsidebar {
+        position: sticky;
+        top: 12px;
+        max-height: calc(100vh - 24px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        align-self: flex-start;
+        z-index: 100;
+        background: #ffffff;
+    }
+}
+
+
+/* =========================================================
+   Interactive Image Zoom and Pan
+   ========================================================= */
+
+div.body img.zoomable-image {
+    cursor: zoom-in;
+}
+
+div.body img.zoomable-image:focus-visible {
+    outline: 3px solid #2c5282;
+    outline-offset: 4px;
+}
+
+.image-lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 16px 48px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.92);
+}
+
+.image-lightbox-toolbar {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+}
+
+.image-lightbox-button {
+    min-width: 42px;
+    min-height: 40px;
+    padding: 6px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 6px;
+    background: #263746;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.image-lightbox-button:hover {
+    background: #38566e;
+}
+
+.image-lightbox-button:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.image-lightbox-level {
+    min-width: 58px;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.image-lightbox-close {
+    font-size: 29px;
+    line-height: 1;
+}
+
+.image-lightbox-viewer {
+    position: relative;
+    width: min(96vw, 1800px);
+    height: 86vh;
+    overflow: hidden;
+    border-radius: 4px;
+    touch-action: none;
+    cursor: default;
+}
+
+.image-lightbox-viewer.is-zoomed {
+    cursor: grab;
+}
+
+.image-lightbox-viewer.is-dragging {
+    cursor: grabbing;
+}
+
+.image-lightbox-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    max-width: calc(100% - 24px);
+    max-height: calc(100% - 24px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transform: translate(-50%, -50%) scale(1);
+    transform-origin: center center;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.image-lightbox-help {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+    color: #dddddd;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    text-align: center;
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+    .image-lightbox-overlay {
+        padding: 58px 6px 42px;
+    }
+
+    .image-lightbox-toolbar {
+        top: 8px;
+        right: 8px;
+        left: 8px;
+        gap: 5px;
+    }
+
+    .image-lightbox-button {
+        min-width: 36px;
+        min-height: 36px;
+        padding: 5px 8px;
+        font-size: 17px;
+    }
+
+    .image-lightbox-level {
+        min-width: 46px;
+        font-size: 12px;
+    }
+
+    .image-lightbox-viewer {
+        width: 100%;
+        height: 84vh;
+    }
+
+    .image-lightbox-help {
+        bottom: 10px;
+        font-size: 11px;
+    }
+}
+
+/* =========================================================
+   Sphinx-Style Typography Override
+   Apply consistently across the entire documentation site
+   ========================================================= */
+
+html,
+body,
+body * {
+    font-family:
+        "Lucida Grande",
+        "Lucida Sans Unicode",
+        Geneva,
+        Verdana,
+        sans-serif !important;
+}
+
+/* Base text size */
+
+html,
+body {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+/* Main content and general interface */
+
+div.document,
+div.documentwrapper,
+div.bodywrapper,
+div.body,
+div.sphinxsidebar,
+div.footer,
+div.relations,
+div.related {
+    font-family:
+        "Lucida Grande",
+        "Lucida Sans Unicode",
+        Geneva,
+        Verdana,
+        sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+/* Paragraphs, lists, descriptions and labels */
+
+div.body p,
+div.body li,
+div.body dd,
+div.body dt,
+div.body blockquote,
+div.body figcaption,
+div.body caption,
+div.sphinxsidebar p,
+div.sphinxsidebar li,
+div.sphinxsidebar a,
+div.sphinxsidebar label,
+p.caption,
+.caption-text {
+    font-family:
+        "Lucida Grande",
+        "Lucida Sans Unicode",
+        Geneva,
+        Verdana,
+        sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+/* Tables */
+
+table,
+table.docutils,
+table.docutils th,
+table.docutils td,
+table.env-table th,
+table.env-table td {
+    font-family:
+        "Lucida Grande",
+        "Lucida Sans Unicode",
+        Geneva,
+        Verdana,
+        sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+}
+
+/* Heading hierarchy */
+
+div.body h1 {
+    font-family:
+        "Lucida Grande",
+        "Lucida Sans Unicode",
+        Geneva,
+        Verdana,
+        sans-serif !important;
+    font-size: 2.4em !important;
+    font-weight: 400 !important;
+    line-height: 1.25 !important;
+}
+
+div.body h2 {
+    font-family:
+        "Lucida Grande",
+        "Lucida Sans Unicode",
+        Geneva,
+        Verdana,
+        sans-serif !important;
+    font-size: 1.8em !important;
+    font-weight: 400 !important;
+    line-height: 1.35 !important;
+}
+
+div.body h3 {
+    font-family:
+        "Lucida Grande",
+        "Lucida Sans Unicode",
+        Geneva,
+        Verdana,
+        sans-serif !important;
+    font-size: 1.5em !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+}
+
+div.body h4 {
+    font-family:
+        "Lucida Grande",
+        "Lucida Sans Unicode",
+        Geneva,
+        Verdana,
+        sans-serif !important;
+    font-size: 1.3em !important;
+    font-weight: 600 !important;
+}
+
+div.body h5,
+div.body h6 {
+    font-family:
+        "Lucida Grande",
+        "Lucida Sans Unicode",
+        Geneva,
+        Verdana,
+        sans-serif !important;
+    font-size: 1em !important;
+    font-weight: 600 !important;
+}
+
+/* Sidebar headings */
+
+div.sphinxsidebar h1,
+div.sphinxsidebar h2,
+div.sphinxsidebar h3,
+div.sphinxsidebar h4 {
+    font-family:
+        "Lucida Grande",
+        "Lucida Sans Unicode",
+        Geneva,
+        Verdana,
+        sans-serif !important;
+    font-weight: 400 !important;
+}
+
+div.sphinxsidebar h3 {
+    font-size: 1.35em !important;
+}
+
+div.sphinxsidebar h4 {
+    font-size: 1.2em !important;
+}
+
+/* Database cards */
+
+.database-card,
+.database-card h3,
+.database-card p,
+.database-card .explore {
+    font-family:
+        "Lucida Grande",
+        "Lucida Sans Unicode",
+        Geneva,
+        Verdana,
+        sans-serif !important;
+}
+
+.database-card p {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+/* Forms and search controls */
+
+input,
+button,
+select,
+textarea,
+label {
+    font-family:
+        "Lucida Grande",
+        "Lucida Sans Unicode",
+        Geneva,
+        Verdana,
+        sans-serif !important;
+    font-size: 14px !important;
+}
+
+/* Keep code in a monospace typeface, as in technical documentation */
+
+div.body pre,
+div.body code,
+div.body tt,
+div.body kbd,
+div.body samp,
+.highlight,
+.highlight *,
+pre,
+code,
+tt,
+kbd,
+samp {
+    font-family:
+        Consolas,
+        "Cascadia Code",
+        "Courier New",
+        monospace !important;
+}
+
+div.body pre,
+pre,
+.highlight {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+}
+
+div.body code,
+div.body tt,
+code,
+tt {
+    font-size: 0.9em !important;
+}
+
+/* Interactive image viewer */
+
+.image-lightbox-button,
+.image-lightbox-level,
+.image-lightbox-help {
+    font-family:
+        "Lucida Grande",
+        "Lucida Sans Unicode",
+        Geneva,
+        Verdana,
+        sans-serif !important;
+}
+
+.image-lightbox-button {
+    font-size: 20px !important;
 }

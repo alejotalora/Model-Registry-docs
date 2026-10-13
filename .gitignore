@@ -1,0 +1,6 @@
+# Generated Sphinx HTML
+build/
+
+# Python cache
+__pycache__/
+*.py[cod]

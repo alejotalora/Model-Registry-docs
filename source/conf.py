@@ -1,6 +1,6 @@
 # Configuration file for the Sphinx documentation builder.
 #
-# For the full list of built-in configuration values, see the documentation:
+# For the full list of built-in configuration values, see:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 
@@ -19,6 +19,7 @@ extensions = [
 ]
 
 templates_path = ['_templates']
+
 exclude_patterns = []
 
 
@@ -27,10 +28,20 @@ exclude_patterns = []
 html_theme = 'alabaster'
 
 html_static_path = ['_static']
-html_css_files = ['custom.css']
+
+# Custom CSS
+html_css_files = [
+    'custom.css',
+]
+
+# Custom JavaScript for image zoom
+html_js_files = [
+    'image-zoom.js',
+]
 
 # STAMM branding
 html_logo = '_static/images/branding/logo-light.png'
+
 html_title = 'STAMM Model Registry Documentation'
 
 
@@ -46,8 +57,6 @@ html_sidebars = {
 }
 
 html_theme_options = {
-    # Keep the sidebar focused on the main documentation sections.
-    'globaltoc_maxdepth': 1,
     'globaltoc_collapse': False,
     'globaltoc_includehidden': True,
 }

@@ -316,20 +316,18 @@ Prediction Trigger
 The prediction trigger endpoint creates the next run for an experiment
 and requests the prediction workflow through the Airflow orchestrator.
 
-.. list-table::
-   :header-rows: 1
-   :widths: 10 50 25 15
+**Method:** ``POST``
 
-   * - Method
-     - Path
-     - Permission
-     - Description
+**Path:**
 
-   * - ``POST``
-     - ``/api/v1/experiments/{experiment_id}/trigger-prediction``
-     - ``experiments:write``
-     - Create the experiment's next run and attempt to trigger the
-       ``deployment_soft_sensors`` Airflow workflow.
+.. code-block:: text
+
+   /api/v1/experiments/{experiment_id}/trigger-prediction
+
+**Permission:** ``experiments:write``
+
+**Description:** Create the experiment's next run and attempt to trigger
+the ``deployment_soft_sensors`` Airflow workflow.
 
 
 Prediction Trigger Details

@@ -7,6 +7,11 @@ The Model Registry is a core component of the STAMM platform responsible
 for managing machine learning models, their metadata and artifacts, and
 providing access through a REST API.
 
+.. image:: _static/images/branding/header.png
+   :alt: Illustration of the STAMM Model Registry, machine-learning models, sensors, and actuators
+   :align: center
+   :class: model-registry-cover
+
 Contents
 --------
 

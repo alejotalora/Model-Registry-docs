@@ -74,35 +74,33 @@ File:
 
 The main API environment variables are:
 
-.. list-table::
-   :class: env-table
-   :header-rows: 1
-   :widths: 25 32 15 28
+**DATABASE_URL**: PostgreSQL connection string. The host is ``postgres``,
+the Docker service name.
 
-   * - Variable
-     - Default
-     - Change?
-     - Description
-   * - ``DATABASE_URL``
-     - ``postgresql://stamm:changeme@postgres:5432/stamm``
-     - Only if credentials change
-     - PostgreSQL connection string. The host is ``postgres``, the Docker service name.
-   * - ``SECRET_KEY``
-     - ``supersecretkey``
-     - Yes (production)
-     - Secret key used to sign JWT tokens. Change it to a long random string.
-   * - ``ALGORITHM``
-     - ``HS256``
-     - No
-     - JWT signing algorithm.
-   * - ``ACCESS_TOKEN_EXPIRE_MINUTES``
-     - ``60``
-     - Optional
-     - Access token lifetime in minutes.
-   * - ``R_API_URL``
-     - ``http://api_r:8581/predict``
-     - No
-     - URL of the R service. This value is overridden in ``docker-compose.yml``.
+* **Default:** ``postgresql://stamm:changeme@postgres:5432/stamm``
+* **Change:** Only if credentials change
+
+**SECRET_KEY**: Secret key used to sign JWT tokens. Change it to a long
+random string in production.
+
+* **Default:** ``supersecretkey``
+* **Change:** Yes (production)
+
+**ALGORITHM**: JWT signing algorithm.
+
+* **Default:** ``HS256``
+* **Change:** No
+
+**ACCESS_TOKEN_EXPIRE_MINUTES**: Access token lifetime in minutes.
+
+* **Default:** ``60``
+* **Change:** Optional
+
+**R_API_URL**: URL of the R service. This value is overridden in
+``docker-compose.yml``.
+
+* **Default:** ``http://api_r:8581/predict``
+* **Change:** No
 
 Backend Configuration
 ~~~~~~~~~~~~~~~~~~~~~
