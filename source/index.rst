@@ -1,3 +1,4 @@
+
 STAMM Model Registry
 ====================
 
@@ -15,29 +16,43 @@ providing access through a REST API.
 Contents
 --------
 
-* :doc:`Getting Started <getting-started/index>`
-
-  * :doc:`Installation & Deployment <getting-started/installation>`
-
 * :doc:`What is the Model Registry? <overview/index>`
 
   * :doc:`Architecture <overview/architecture>`
 
-* :doc:`API <api/index>`
+* :doc:`Getting Started <getting-started/index>`
 
-  * :doc:`API Reference <api/api-reference>`
+  * :doc:`Installation and Deployment <getting-started/installation>`
 
-  * :doc:`Authentication & Permissions <api/authentication-permissions>`
+* **For developers**
 
-  * :doc:`Auth Flow <api/auth-flow>`
+  * :doc:`API <api/index>`
 
-  * :doc:`Model Retrieval Flow <api/model-retrieval-flow>`
+    * :doc:`API Reference <api/api-reference>`
 
-  * :doc:`Request/Response Examples <api/request-response-examples>`
+    * :doc:`Authentication and Permissions <api/authentication-permissions>`
 
-* :doc:`Database <database/index>`
+    * :doc:`Authentication Flow <api/auth-flow>`
 
-  * :ref:`Database Overview <database-overview>`
+    * :doc:`Model Retrieval Flow <api/model-retrieval-flow>`
+
+    * :doc:`Request and Response Examples <api/request-response-examples>`
+
+  * :doc:`Database <database/index>`
+
+    * :ref:`Database Overview <database-overview>`
+
+* :doc:`For users <for-users/index>`
+
+  * :doc:`ML Soft Sensors <for-users/ml-soft-sensors/index>`
+
+    * :doc:`CRUD Operations <for-users/ml-soft-sensors/crud>`
+
+    * :doc:`Model Explainability (XAI) <for-users/ml-soft-sensors/xai>`
+
+    * :doc:`Other Soft Sensor Functionalities <for-users/ml-soft-sensors/other-functionalities>`
+
+  * :doc:`Drift Detectors <for-users/drift-detectors/index>`
 
 
 .. toctree::
@@ -45,7 +60,8 @@ Contents
    :maxdepth: 4
    :includehidden:
 
-   getting-started/index
    overview/index
+   getting-started/index
    api/index
    database/index
+   for-users/index

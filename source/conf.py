@@ -35,9 +35,7 @@ html_css_files = [
 ]
 
 # Custom JavaScript for image zoom
-html_js_files = [
-    'image-zoom.js',
-]
+html_js_files = ['image-zoom.js', 'theme-toggle.js']
 
 # STAMM branding
 html_logo = '_static/images/branding/logo-light.png'

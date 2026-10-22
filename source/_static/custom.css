@@ -1,5 +1,80 @@
+
 /* =========================================================
-   Global Layout
+   STAMM MODEL REGISTRY DOCUMENTATION
+   Complete custom stylesheet
+   ========================================================= */
+
+
+/* =========================================================
+   1. GLOBAL TYPOGRAPHY
+   ========================================================= */
+
+html,
+body {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+html,
+body,
+body * {
+    font-family:
+        "Lucida Grande",
+        "Lucida Sans Unicode",
+        Geneva,
+        Verdana,
+        sans-serif !important;
+}
+
+code,
+tt,
+pre,
+kbd,
+samp,
+.highlight pre,
+.literal-block-wrapper,
+.linenodiv pre,
+div.viewcode-block {
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace !important;
+}
+
+code,
+tt {
+    font-size: 0.94em;
+}
+
+pre {
+    line-height: 1.5;
+    overflow-x: auto;
+}
+
+.document h1 {
+    font-size: 2.4em;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+.document h2 {
+    font-size: 1.8em;
+    line-height: 1.3;
+}
+
+.document h3 {
+    font-size: 1.5em;
+    line-height: 1.35;
+}
+
+.document h4 {
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   2. MAIN DOCUMENTATION LAYOUT
    ========================================================= */
 
 div.document {
@@ -8,143 +83,234 @@ div.document {
     margin: 24px auto 0 auto !important;
 }
 
-div.documentwrapper,
-div.bodywrapper {
-    min-width: 0;
-}
+@media (min-width: 769px) {
+    div.sphinxsidebar {
+        width: 290px !important;
+        max-width: 290px;
+        box-sizing: border-box;
+    }
 
-div.body {
-    min-width: 0;
-    max-width: none;
+    div.sphinxsidebar .sphinxsidebarwrapper {
+        width: 100% !important;
+        max-width: none !important;
+        box-sizing: border-box;
+        padding-left: 20px !important;
+        padding-right: 18px !important;
+    }
+
+    div.bodywrapper {
+        margin-left: 310px !important;
+    }
 }
 
 
 /* =========================================================
-   Global Typography
+   3. STICKY SIDEBAR
    ========================================================= */
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                 Arial, Helvetica, sans-serif !important;
-    font-size: 17px !important;
-    line-height: 1.65;
+@media (min-width: 769px) {
+    div.sphinxsidebar {
+        position: sticky;
+        top: 12px;
+        align-self: flex-start;
+        max-height: calc(100vh - 24px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-gutter: stable;
+    }
+
+    div.sphinxsidebar .sphinxsidebarwrapper {
+        padding-top: 20px;
+        padding-bottom: 16px;
+    }
+
+    div.sphinxsidebar::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    div.sphinxsidebar::-webkit-scrollbar-thumb {
+        background: #999;
+        border-radius: 8px;
+    }
+
+    div.sphinxsidebar::-webkit-scrollbar-track {
+        background: #f5f5f5;
+    }
 }
 
-/* Main documentation text */
 
-div.body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                 Arial, Helvetica, sans-serif !important;
-    font-size: 1rem;
-    line-height: 1.7;
+/* =========================================================
+   4. STAMM BRANDING
+   ========================================================= */
+
+.sphinxsidebarwrapper p.logo img {
+    display: block;
+    width: 160px;
+    max-width: 160px !important;
+    height: auto;
+    margin: 0 auto 20px auto;
 }
 
-div.body p,
-div.body li,
-div.body dd {
-    font-size: 1rem;
-    line-height: 1.7;
+.sphinxsidebarwrapper {
+    padding-top: 20px;
 }
 
-/* Main page title */
-
-div.body h1 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                 Arial, Helvetica, sans-serif !important;
-    font-size: 2.2rem;
-    font-weight: 400;
-    line-height: 1.25;
-    margin-top: 0.25em;
-    margin-bottom: 0.65em;
+.sphinxsidebarwrapper h1.logo {
+    display: none;
 }
 
-/* Section titles */
 
-div.body h2 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                 Arial, Helvetica, sans-serif !important;
-    font-size: 1.65rem;
-    font-weight: 400;
-    line-height: 1.35;
-    margin-top: 1.4em;
-    margin-bottom: 0.6em;
+/* =========================================================
+   5. HOME PAGE COVER
+   ========================================================= */
+
+.model-registry-cover {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 20px auto 32px auto;
 }
 
-div.body h3 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                 Arial, Helvetica, sans-serif !important;
-    font-size: 1.3rem;
-    font-weight: 500;
-    line-height: 1.4;
+
+/* =========================================================
+   6. SIDEBAR NAVIGATION
+   ========================================================= */
+
+#sidebar-toc .sidebar-toc-list,
+#sidebar-toc .sidebar-toc-children {
+    list-style: none !important;
+    padding: 0;
 }
 
-div.body h4,
-div.body h5,
-div.body h6 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                 Arial, Helvetica, sans-serif !important;
-    font-weight: 600;
+#sidebar-toc .sidebar-toc-list {
+    margin: 0;
+}
+
+#sidebar-toc .sidebar-toc-list > li {
+    margin: 0 0 9px 0;
+}
+
+#sidebar-toc .sidebar-toc-children {
+    margin: 5px 0 8px 22px;
+    padding-left: 10px;
+    border-left: 1px solid #dedede;
+}
+
+#sidebar-toc .sidebar-toc-children > li {
+    margin: 5px 0;
+}
+
+#sidebar-toc .sidebar-toc-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    min-width: 0;
+}
+
+#sidebar-toc .sidebar-toc-toggle {
+    appearance: none;
+    flex: 0 0 20px;
+    width: 20px;
+    min-width: 20px;
+    margin: 2px 0 0 0;
+    padding: 0;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #555;
+    font-family: inherit !important;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+    cursor: pointer;
+}
+
+#sidebar-toc .sidebar-toc-toggle:hover {
+    color: #333;
+}
+
+#sidebar-toc .sidebar-toc-toggle:focus-visible {
+    outline: 2px solid #777;
+    outline-offset: 2px;
+}
+
+#sidebar-toc .sidebar-toc-link,
+#sidebar-toc .sidebar-toc-label {
+    min-width: 0;
+    overflow-wrap: anywhere;
     line-height: 1.45;
 }
 
-/* Code typography */
-
-div.body code,
-div.body tt,
-div.body pre {
-    font-family: Consolas, "Cascadia Code", "Courier New", monospace;
+#sidebar-toc .sidebar-toc-link--major,
+#sidebar-toc .sidebar-toc-label--major {
+    font-weight: 700 !important;
 }
 
-div.body code,
-div.body tt {
-    font-size: 0.88em;
+#sidebar-toc .sidebar-toc-label--user-category {
+    font-weight: 700 !important;
 }
 
-div.body pre {
-    font-size: 0.9rem;
-    line-height: 1.55;
+#sidebar-toc .sidebar-toc-row >
+a.sidebar-toc-link--major[href*="for-users/index"] {
+    color: #111111 !important;
+    font-weight: 700 !important;
+}
+
+#sidebar-toc [hidden] {
+    display: none !important;
 }
 
 
 /* =========================================================
-   Sidebar Typography
+   7. LIGHT / DARK THEME TOGGLE
    ========================================================= */
 
-div.sphinxsidebar {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                 Arial, Helvetica, sans-serif !important;
-    font-size: 15px;
-    line-height: 1.55;
+.sphinxsidebarwrapper h3.sidebar-toc-heading {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
 }
 
-div.sphinxsidebar h1,
-div.sphinxsidebar h2,
-div.sphinxsidebar h3,
-div.sphinxsidebar h4 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                 Arial, Helvetica, sans-serif !important;
-    font-weight: 400;
-    line-height: 1.35;
+.theme-toggle-button {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #d5d5d5;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #333333;
+    font-family: sans-serif !important;
+    font-size: 19px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: none;
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
 }
 
-div.sphinxsidebar h3 {
-    font-size: 1.35rem;
+.theme-toggle-button:hover {
+    background: #f0f0f0;
+    border-color: #a0a0a0;
+    transform: scale(1.05);
 }
 
-div.sphinxsidebar p,
-div.sphinxsidebar li,
-div.sphinxsidebar a {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                 Arial, Helvetica, sans-serif !important;
-}
-
-div.sphinxsidebar a {
-    line-height: 1.5;
+.theme-toggle-button:focus-visible {
+    outline: 2px solid #777777;
+    outline-offset: 3px;
 }
 
 
 /* =========================================================
-   Database Overview Cards
+   8. DATABASE OVERVIEW CARDS
    ========================================================= */
 
 .database-grid {
@@ -163,7 +329,9 @@ div.sphinxsidebar a {
     background: #ffffff;
     text-decoration: none !important;
     color: #2c3e50 !important;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
 }
 
 .database-card:hover {
@@ -175,13 +343,10 @@ div.sphinxsidebar a {
     margin-top: 0;
     margin-bottom: 10px;
     color: #2c5282;
-    font-size: 1.2rem;
 }
 
 .database-card p {
     margin-bottom: 8px;
-    font-size: 0.95rem;
-    line-height: 1.6;
 }
 
 .database-card .explore {
@@ -196,29 +361,7 @@ div.sphinxsidebar a {
 
 
 /* =========================================================
-   STAMM Branding
-   ========================================================= */
-
-.sphinxsidebarwrapper p.logo img {
-    max-width: 160px !important;
-    width: 160px;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px auto;
-}
-
-.sphinxsidebarwrapper {
-    padding-top: 20px;
-}
-
-.sphinxsidebarwrapper h1.logo {
-    display: none;
-}
-
-
-/* =========================================================
-   Sphinx Tables
-   Preserve all existing table structures.
+   9. SPHINX TABLES
    ========================================================= */
 
 table.docutils {
@@ -230,9 +373,13 @@ table.docutils td {
     vertical-align: top;
 }
 
+table.docutils th {
+    font-weight: 700;
+}
+
 
 /* =========================================================
-   Environment Variable Tables
+   10. ENVIRONMENT VARIABLE TABLES
    ========================================================= */
 
 table.env-table {
@@ -256,165 +403,41 @@ table.env-table th code {
 
 
 /* =========================================================
-   Main Documentation Content
+   11. IMAGE ZOOM — MATCHES image-zoom.js
+   Uses the actual image-lightbox-* classes
    ========================================================= */
 
-.document h1 {
-    margin-top: 0;
-}
-
-
-/* =========================================================
-   Responsive Page Layout
-   ========================================================= */
-
-@media (max-width: 875px) {
-    div.document {
-        width: 100% !important;
-        max-width: none;
-        margin-top: 0 !important;
-    }
-
-    div.body {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    div.body h1 {
-        font-size: 1.9rem;
-    }
-
-    div.body h2 {
-        font-size: 1.5rem;
-    }
-
-    .database-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .database-card.full-erd {
-        grid-column: auto;
-    }
-
-    div.sphinxsidebar {
-        position: static;
-        max-height: none;
-        overflow: visible;
-    }
-}
-
-
-/* =========================================================
-   Model Registry Homepage Cover
-   ========================================================= */
-
-img.model-registry-cover {
-    display: block;
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    margin: 28px auto 36px auto;
-}
-
-
-/* =========================================================
-   Keep the Sidebar Visible While Scrolling
-   ========================================================= */
-
-@media (min-width: 876px) {
-    div.sphinxsidebar {
-        position: sticky;
-        top: 12px;
-        max-height: calc(100vh - 24px);
-        overflow-y: auto;
-        overflow-x: hidden;
-        align-self: flex-start;
-        z-index: 100;
-        background: #ffffff;
-    }
-}
-
-
-/* =========================================================
-   Interactive Image Zoom and Pan
-   ========================================================= */
-
-div.body img.zoomable-image {
-    cursor: zoom-in;
-}
-
-div.body img.zoomable-image:focus-visible {
-    outline: 3px solid #2c5282;
-    outline-offset: 4px;
-}
+/* Full-screen dark overlay */
 
 .image-lightbox-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 99999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 16px 48px;
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 99999 !important;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: rgba(12, 14, 18, 0.96);
     box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.92);
 }
 
-.image-lightbox-toolbar {
-    position: absolute;
-    top: 14px;
-    right: 20px;
-    left: 20px;
-    z-index: 2;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 8px;
-}
-
-.image-lightbox-button {
-    min-width: 42px;
-    min-height: 40px;
-    padding: 6px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    border-radius: 6px;
-    background: #263746;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.image-lightbox-button:hover {
-    background: #38566e;
-}
-
-.image-lightbox-button:focus-visible {
-    outline: 2px solid #ffffff;
-    outline-offset: 3px;
-}
-
-.image-lightbox-level {
-    min-width: 58px;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    text-align: center;
-}
-
-.image-lightbox-close {
-    font-size: 29px;
-    line-height: 1;
-}
+/* Full-screen image viewing surface */
 
 .image-lightbox-viewer {
-    position: relative;
-    width: min(96vw, 1800px);
-    height: 86vh;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
-    border-radius: 4px;
+    box-sizing: border-box;
     touch-action: none;
-    cursor: default;
+    cursor: grab;
+    outline: none;
+    user-select: none;
 }
 
 .image-lightbox-viewer.is-zoomed {
@@ -425,323 +448,440 @@ div.body img.zoomable-image:focus-visible {
     cursor: grabbing;
 }
 
+/* Enlarged image, centered and initially fitted to the viewport */
+
 .image-lightbox-image {
-    position: absolute;
+    position: absolute !important;
+    display: block !important;
     top: 50%;
     left: 50%;
-    display: block;
-    max-width: calc(100% - 24px);
-    max-height: calc(100% - 24px);
-    width: auto;
-    height: auto;
+    width: auto !important;
+    height: auto !important;
+    max-width: calc(100vw - 64px) !important;
+    max-height: calc(100vh - 110px) !important;
+    margin: 0 !important;
+    padding: 0;
+    border: 0;
     object-fit: contain;
     transform: translate(-50%, -50%) scale(1);
     transform-origin: center center;
     user-select: none;
     -webkit-user-drag: none;
-}
-
-.image-lightbox-help {
-    position: absolute;
-    bottom: 14px;
-    left: 0;
-    right: 0;
-    color: #dddddd;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    text-align: center;
     pointer-events: none;
 }
 
-@media (max-width: 600px) {
-    .image-lightbox-overlay {
-        padding: 58px 6px 42px;
-    }
+/* Toolbar with zoom, fit and close buttons */
 
-    .image-lightbox-toolbar {
-        top: 8px;
-        right: 8px;
-        left: 8px;
-        gap: 5px;
-    }
-
-    .image-lightbox-button {
-        min-width: 36px;
-        min-height: 36px;
-        padding: 5px 8px;
-        font-size: 17px;
-    }
-
-    .image-lightbox-level {
-        min-width: 46px;
-        font-size: 12px;
-    }
-
-    .image-lightbox-viewer {
-        width: 100%;
-        height: 84vh;
-    }
-
-    .image-lightbox-help {
-        bottom: 10px;
-        font-size: 11px;
-    }
+.image-lightbox-toolbar {
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    max-width: calc(100vw - 24px);
+    margin: 0;
+    padding: 8px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    background: rgba(36, 40, 48, 0.96);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+    box-sizing: border-box;
+    transform: translateX(-50%);
 }
+
+/* Toolbar buttons */
+
+.image-lightbox-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    min-height: 36px;
+    margin: 0;
+    padding: 7px 12px;
+    border: 1px solid #5d6572;
+    border-radius: 6px;
+    background: #303641;
+    color: #ffffff !important;
+    font-family: "Lucida Grande", sans-serif !important;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: none;
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.image-lightbox-button:hover {
+    background: #454c59;
+    border-color: #9ba4b3;
+}
+
+.image-lightbox-button:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* Close button */
+
+.image-lightbox-button.image-lightbox-close {
+    min-width: 36px;
+    padding: 5px 10px;
+    margin-left: 4px;
+    font-size: 22px;
+    line-height: 1;
+}
+
+/* Current zoom percentage */
+
+.image-lightbox-level {
+    display: inline-block;
+    min-width: 48px;
+    padding: 0 5px;
+    color: #f1f3f6;
+    font-size: 13px;
+    text-align: center;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Help text at the bottom of the viewer */
+
+.image-lightbox-help {
+    position: absolute;
+    left: 50%;
+    bottom: 14px;
+    z-index: 3;
+    max-width: calc(100vw - 24px);
+    margin: 0;
+    padding: 7px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 7px;
+    background: rgba(36, 40, 48, 0.88);
+    color: #e4e7eb;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+    white-space: normal;
+    box-sizing: border-box;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+/* Mark documentation images as zoomable */
+
+.document img.zoomable-image {
+    cursor: zoom-in;
+}
+
+.document img.zoomable-image:focus-visible {
+    outline: 2px solid #567fbd;
+    outline-offset: 3px;
+}
+
 
 /* =========================================================
-   Sphinx-Style Typography Override
-   Apply consistently across the entire documentation site
+   12. DARK THEME
    ========================================================= */
 
-html,
-body,
-body * {
-    font-family:
-        "Lucida Grande",
-        "Lucida Sans Unicode",
-        Geneva,
-        Verdana,
-        sans-serif !important;
+html.theme-dark {
+    color-scheme: dark;
+    background: #181a1f !important;
 }
 
-/* Base text size */
-
-html,
-body {
-    font-size: 14px !important;
-    line-height: 1.5 !important;
+html.theme-dark body,
+html.theme-dark div.document,
+html.theme-dark div.documentwrapper,
+html.theme-dark div.bodywrapper,
+html.theme-dark div.body,
+html.theme-dark .document,
+html.theme-dark .sphinxsidebar,
+html.theme-dark .sphinxsidebarwrapper,
+html.theme-dark .footer,
+html.theme-dark .related {
+    background-color: #181a1f !important;
+    color: #e6e8ed !important;
 }
 
-/* Main content and general interface */
+/* Text and headings */
 
-div.document,
-div.documentwrapper,
-div.bodywrapper,
-div.body,
-div.sphinxsidebar,
-div.footer,
-div.relations,
-div.related {
-    font-family:
-        "Lucida Grande",
-        "Lucida Sans Unicode",
-        Geneva,
-        Verdana,
-        sans-serif !important;
-    font-size: 14px !important;
-    line-height: 1.5 !important;
+html.theme-dark .document h1,
+html.theme-dark .document h2,
+html.theme-dark .document h3,
+html.theme-dark .document h4,
+html.theme-dark .document h5,
+html.theme-dark .document h6,
+html.theme-dark .document p,
+html.theme-dark .document li,
+html.theme-dark .document dt,
+html.theme-dark .document dd,
+html.theme-dark .document blockquote,
+html.theme-dark .document caption,
+html.theme-dark .sphinxsidebarwrapper h1,
+html.theme-dark .sphinxsidebarwrapper h2,
+html.theme-dark .sphinxsidebarwrapper h3,
+html.theme-dark .sphinxsidebarwrapper h4,
+html.theme-dark .sphinxsidebarwrapper p,
+html.theme-dark .sphinxsidebarwrapper label {
+    color: #e6e8ed !important;
 }
 
-/* Paragraphs, lists, descriptions and labels */
+/* Links */
 
-div.body p,
-div.body li,
-div.body dd,
-div.body dt,
-div.body blockquote,
-div.body figcaption,
-div.body caption,
-div.sphinxsidebar p,
-div.sphinxsidebar li,
-div.sphinxsidebar a,
-div.sphinxsidebar label,
-p.caption,
-.caption-text {
-    font-family:
-        "Lucida Grande",
-        "Lucida Sans Unicode",
-        Geneva,
-        Verdana,
-        sans-serif !important;
-    font-size: 14px !important;
-    line-height: 1.5 !important;
+html.theme-dark .document a,
+html.theme-dark .sphinxsidebarwrapper a,
+html.theme-dark #sidebar-toc .sidebar-toc-link {
+    color: #8ab4f8 !important;
+}
+
+html.theme-dark .document a:visited,
+html.theme-dark .sphinxsidebarwrapper a:visited {
+    color: #c6a4ff !important;
+}
+
+html.theme-dark .document a:hover,
+html.theme-dark .sphinxsidebarwrapper a:hover {
+    color: #b6d2ff !important;
+}
+
+/* Sidebar titles */
+
+html.theme-dark #sidebar-toc .sidebar-toc-label,
+html.theme-dark #sidebar-toc .sidebar-toc-label--major,
+html.theme-dark #sidebar-toc .sidebar-toc-label--user-category,
+html.theme-dark #sidebar-toc .sidebar-toc-link--major,
+html.theme-dark #sidebar-toc .sidebar-toc-row >
+a.sidebar-toc-link--major[href*="for-users/index"] {
+    color: #f1f3f6 !important;
+    font-weight: 700 !important;
+}
+
+html.theme-dark #sidebar-toc .sidebar-toc-toggle {
+    color: #d1d5db !important;
+}
+
+html.theme-dark #sidebar-toc .sidebar-toc-toggle:hover {
+    color: #ffffff !important;
+}
+
+html.theme-dark #sidebar-toc .sidebar-toc-children {
+    border-left-color: #414650;
+}
+
+/* Theme toggle */
+
+html.theme-dark .theme-toggle-button {
+    background: #292d35;
+    border-color: #505662;
+    color: #f1f3f6;
+}
+
+html.theme-dark .theme-toggle-button:hover {
+    background: #353b46;
+    border-color: #777f8d;
 }
 
 /* Tables */
 
-table,
-table.docutils,
-table.docutils th,
-table.docutils td,
-table.env-table th,
-table.env-table td {
-    font-family:
-        "Lucida Grande",
-        "Lucida Sans Unicode",
-        Geneva,
-        Verdana,
-        sans-serif !important;
-    font-size: 14px !important;
-    line-height: 1.45 !important;
+html.theme-dark table.docutils,
+html.theme-dark table.docutils th,
+html.theme-dark table.docutils td,
+html.theme-dark table.env-table,
+html.theme-dark table.env-table th,
+html.theme-dark table.env-table td {
+    background-color: #202329 !important;
+    color: #e6e8ed !important;
+    border-color: #414650 !important;
 }
 
-/* Heading hierarchy */
-
-div.body h1 {
-    font-family:
-        "Lucida Grande",
-        "Lucida Sans Unicode",
-        Geneva,
-        Verdana,
-        sans-serif !important;
-    font-size: 2.4em !important;
-    font-weight: 400 !important;
-    line-height: 1.25 !important;
+html.theme-dark table.docutils tr:nth-child(even) td {
+    background-color: #262a32 !important;
 }
 
-div.body h2 {
-    font-family:
-        "Lucida Grande",
-        "Lucida Sans Unicode",
-        Geneva,
-        Verdana,
-        sans-serif !important;
-    font-size: 1.8em !important;
-    font-weight: 400 !important;
-    line-height: 1.35 !important;
+/* Code */
+
+html.theme-dark pre,
+html.theme-dark code,
+html.theme-dark tt,
+html.theme-dark kbd,
+html.theme-dark samp,
+html.theme-dark .highlight,
+html.theme-dark .highlight pre,
+html.theme-dark div.highlight,
+html.theme-dark .literal-block-wrapper,
+html.theme-dark .linenos,
+html.theme-dark .lineno {
+    background-color: #242831 !important;
+    color: #e6e8ed !important;
+    border-color: #414650 !important;
 }
 
-div.body h3 {
-    font-family:
-        "Lucida Grande",
-        "Lucida Sans Unicode",
-        Geneva,
-        Verdana,
-        sans-serif !important;
-    font-size: 1.5em !important;
-    font-weight: 400 !important;
-    line-height: 1.4 !important;
+/* Notes and admonitions */
+
+html.theme-dark .admonition,
+html.theme-dark .note,
+html.theme-dark .warning,
+html.theme-dark .tip,
+html.theme-dark .seealso,
+html.theme-dark .important,
+html.theme-dark .caution,
+html.theme-dark .attention {
+    background-color: #232730 !important;
+    color: #e6e8ed !important;
+    border-color: #4b5563 !important;
 }
 
-div.body h4 {
-    font-family:
-        "Lucida Grande",
-        "Lucida Sans Unicode",
-        Geneva,
-        Verdana,
-        sans-serif !important;
-    font-size: 1.3em !important;
-    font-weight: 600 !important;
-}
-
-div.body h5,
-div.body h6 {
-    font-family:
-        "Lucida Grande",
-        "Lucida Sans Unicode",
-        Geneva,
-        Verdana,
-        sans-serif !important;
-    font-size: 1em !important;
-    font-weight: 600 !important;
-}
-
-/* Sidebar headings */
-
-div.sphinxsidebar h1,
-div.sphinxsidebar h2,
-div.sphinxsidebar h3,
-div.sphinxsidebar h4 {
-    font-family:
-        "Lucida Grande",
-        "Lucida Sans Unicode",
-        Geneva,
-        Verdana,
-        sans-serif !important;
-    font-weight: 400 !important;
-}
-
-div.sphinxsidebar h3 {
-    font-size: 1.35em !important;
-}
-
-div.sphinxsidebar h4 {
-    font-size: 1.2em !important;
+html.theme-dark .admonition-title {
+    color: #f1f3f6 !important;
 }
 
 /* Database cards */
 
-.database-card,
-.database-card h3,
-.database-card p,
-.database-card .explore {
-    font-family:
-        "Lucida Grande",
-        "Lucida Sans Unicode",
-        Geneva,
-        Verdana,
-        sans-serif !important;
+html.theme-dark .database-card {
+    background-color: #22262e !important;
+    color: #e6e8ed !important;
+    border-color: #414650 !important;
 }
 
-.database-card p {
-    font-size: 14px !important;
-    line-height: 1.5 !important;
+html.theme-dark .database-card h3,
+html.theme-dark .database-card .explore {
+    color: #a9c7ff !important;
 }
 
-/* Forms and search controls */
+/* Search and form controls */
 
-input,
-button,
-select,
-textarea,
-label {
-    font-family:
-        "Lucida Grande",
-        "Lucida Sans Unicode",
-        Geneva,
-        Verdana,
-        sans-serif !important;
-    font-size: 14px !important;
+html.theme-dark input,
+html.theme-dark textarea,
+html.theme-dark select {
+    background-color: #242831 !important;
+    color: #e6e8ed !important;
+    border-color: #4b5563 !important;
 }
 
-/* Keep code in a monospace typeface, as in technical documentation */
-
-div.body pre,
-div.body code,
-div.body tt,
-div.body kbd,
-div.body samp,
-.highlight,
-.highlight *,
-pre,
-code,
-tt,
-kbd,
-samp {
-    font-family:
-        Consolas,
-        "Cascadia Code",
-        "Courier New",
-        monospace !important;
+html.theme-dark input::placeholder,
+html.theme-dark textarea::placeholder {
+    color: #b0b7c3 !important;
 }
 
-div.body pre,
-pre,
-.highlight {
-    font-size: 13px !important;
-    line-height: 1.5 !important;
+html.theme-dark .sphinxsidebarwrapper input[type="submit"] {
+    background-color: #303641 !important;
+    border-color: #555d69 !important;
 }
 
-div.body code,
-div.body tt,
-code,
-tt {
-    font-size: 0.9em !important;
+/* Dividers */
+
+html.theme-dark hr,
+html.theme-dark .headerlink {
+    border-color: #414650 !important;
+    color: #aeb8c7 !important;
 }
 
-/* Interactive image viewer */
 
-.image-lightbox-button,
-.image-lightbox-level,
-.image-lightbox-help {
-    font-family:
-        "Lucida Grande",
-        "Lucida Sans Unicode",
-        Geneva,
-        Verdana,
-        sans-serif !important;
+/* =========================================================
+   13. MOBILE / NARROW SCREENS
+   ========================================================= */
+
+@media (max-width: 800px) {
+    .database-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .database-card.full-erd {
+        grid-column: auto;
+    }
 }
 
-.image-lightbox-button {
-    font-size: 20px !important;
+@media (max-width: 768px) {
+    div.document {
+        width: 96% !important;
+        max-width: none;
+        margin: 16px auto 0 auto !important;
+    }
+
+    div.sphinxsidebar {
+        position: static;
+        float: none;
+        width: 100% !important;
+        max-width: none;
+        max-height: none;
+        overflow: visible;
+    }
+
+    div.sphinxsidebar .sphinxsidebarwrapper {
+        width: 100% !important;
+        max-width: none !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        box-sizing: border-box;
+    }
+
+    div.bodywrapper {
+        margin-left: 0 !important;
+    }
+
+    .document h1 {
+        font-size: 2em;
+    }
+
+    .document h2 {
+        font-size: 1.6em;
+    }
+
+    .document h3 {
+        font-size: 1.3em;
+    }
+
+    /* Compact lightbox controls on small screens */
+
+    .image-lightbox-toolbar {
+        top: 8px;
+        gap: 5px;
+        padding: 6px;
+    }
+
+    .image-lightbox-button {
+        min-width: 34px;
+        min-height: 34px;
+        padding: 6px 9px;
+        font-size: 13px;
+    }
+
+    .image-lightbox-button.image-lightbox-close {
+        min-width: 32px;
+        padding: 5px 8px;
+        font-size: 20px;
+    }
+
+    .image-lightbox-image {
+        max-width: calc(100vw - 20px) !important;
+        max-height: calc(100vh - 100px) !important;
+    }
+
+    .image-lightbox-help {
+        bottom: 8px;
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   14. GENERAL DOCUMENT SPACING
+   ========================================================= */
+
+.document h1 {
+    margin-top: 0;
+}
+
+.document p,
+.document li {
+    line-height: 1.5;
+}
+
+.document table {
+    margin-bottom: 20px;
 }

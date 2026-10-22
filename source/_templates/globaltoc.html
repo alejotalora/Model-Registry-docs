@@ -1,35 +1,246 @@
-<div class="globaltoc">
 
-  <p class="caption">
-    <span class="caption-text">Table of Contents</span>
-  </p>
+<h3>Table of Contents</h3>
 
-  <ul class="current">
+<nav id="sidebar-toc" aria-label="Documentation navigation">
+  <ul class="sidebar-toc-list">
 
-    <li class="toctree-l1">
-      <a href="{{ pathto('getting-started/index') }}">
-        Getting Started
-      </a>
+    <!-- What is the Model Registry? -->
+    <li>
+      <div class="sidebar-toc-row">
+        <button class="sidebar-toc-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="toc-overview"
+                title="Expand section">▸</button>
+
+        <a class="sidebar-toc-link sidebar-toc-link--major"
+           href="{{ pathto('overview/index') }}">
+          What is the Model Registry?
+        </a>
+      </div>
+
+      <ul class="sidebar-toc-children" id="toc-overview" hidden>
+        <li>
+          <a class="sidebar-toc-link"
+             href="{{ pathto('overview/architecture') }}">
+            Architecture
+          </a>
+        </li>
+      </ul>
     </li>
 
-    <li class="toctree-l1">
-      <a href="{{ pathto('overview/index') }}">
-        What is the Model Registry?
-      </a>
+    <!-- Getting Started -->
+    <li>
+      <div class="sidebar-toc-row">
+        <button class="sidebar-toc-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="toc-getting-started"
+                title="Expand section">▸</button>
+
+        <a class="sidebar-toc-link sidebar-toc-link--major"
+           href="{{ pathto('getting-started/index') }}">
+          Getting Started
+        </a>
+      </div>
+
+      <ul class="sidebar-toc-children"
+          id="toc-getting-started" hidden>
+        <li>
+          <a class="sidebar-toc-link"
+             href="{{ pathto('getting-started/installation') }}">
+            Installation and Deployment
+          </a>
+        </li>
+      </ul>
     </li>
 
-    <li class="toctree-l1">
-      <a href="{{ pathto('api/index') }}">
-        API
-      </a>
+    <!-- For developers -->
+    <li>
+      <div class="sidebar-toc-row">
+        <button class="sidebar-toc-toggle"
+                type="button"
+                aria-expanded="true"
+                aria-controls="toc-developers"
+                title="Collapse section">▾</button>
+
+        <span class="sidebar-toc-label sidebar-toc-label--major">
+          For developers
+        </span>
+      </div>
+
+      <ul class="sidebar-toc-children" id="toc-developers">
+
+        <!-- API -->
+        <li>
+          <div class="sidebar-toc-row">
+            <button class="sidebar-toc-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="toc-api"
+                    title="Expand section">▸</button>
+
+            <a class="sidebar-toc-link sidebar-toc-link--major"
+               href="{{ pathto('api/index') }}">
+              API
+            </a>
+          </div>
+
+          <ul class="sidebar-toc-children" id="toc-api" hidden>
+            <li>
+              <a class="sidebar-toc-link"
+                 href="{{ pathto('api/api-reference') }}">
+                API Reference
+              </a>
+            </li>
+            <li>
+              <a class="sidebar-toc-link"
+                 href="{{ pathto('api/authentication-permissions') }}">
+                Authentication and Permissions
+              </a>
+            </li>
+            <li>
+              <a class="sidebar-toc-link"
+                 href="{{ pathto('api/auth-flow') }}">
+                Authentication Flow
+              </a>
+            </li>
+            <li>
+              <a class="sidebar-toc-link"
+                 href="{{ pathto('api/model-retrieval-flow') }}">
+                Model Retrieval Flow
+              </a>
+            </li>
+            <li>
+              <a class="sidebar-toc-link"
+                 href="{{ pathto('api/request-response-examples') }}">
+                Request and Response Examples
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Database -->
+        <li>
+          <div class="sidebar-toc-row">
+            <button class="sidebar-toc-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="toc-database"
+                    title="Expand section">▸</button>
+
+            <a class="sidebar-toc-link sidebar-toc-link--major"
+               href="{{ pathto('database/index') }}">
+              Database
+            </a>
+          </div>
+
+          <ul class="sidebar-toc-children" id="toc-database" hidden>
+            <li>
+              <a class="sidebar-toc-link"
+                 href="{{ pathto('database/index') }}">
+                Database Overview
+              </a>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
     </li>
 
-    <li class="toctree-l1">
-      <a href="{{ pathto('database/index') }}">
-        Database
-      </a>
+    <!-- For users -->
+    <li>
+      <div class="sidebar-toc-row">
+        <button class="sidebar-toc-toggle"
+                type="button"
+                aria-expanded="true"
+                aria-controls="toc-users"
+                title="Collapse section">▾</button>
+
+        <a class="sidebar-toc-link sidebar-toc-link--major"
+           href="{{ pathto('for-users/index') }}">
+          For users
+        </a>
+      </div>
+
+      <ul class="sidebar-toc-children" id="toc-users">
+
+        <!-- ML Soft Sensors -->
+        <li>
+          <div class="sidebar-toc-row">
+            <button class="sidebar-toc-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="toc-soft-sensors"
+                    title="Expand section">▸</button>
+
+            <a class="sidebar-toc-link sidebar-toc-label--user-category"
+               href="{{ pathto('for-users/ml-soft-sensors/index') }}">
+              ML Soft Sensors
+            </a>
+          </div>
+
+          <ul class="sidebar-toc-children"
+              id="toc-soft-sensors" hidden>
+            <li>
+              <a class="sidebar-toc-link"
+                 href="{{ pathto('for-users/ml-soft-sensors/crud') }}">
+                CRUD
+              </a>
+            </li>
+            <li>
+              <a class="sidebar-toc-link"
+                 href="{{ pathto('for-users/ml-soft-sensors/xai') }}">
+                XAI (Explainable AI)
+              </a>
+            </li>
+            <li>
+              <a class="sidebar-toc-link"
+                 href="{{ pathto('for-users/ml-soft-sensors/other-functionalities') }}">
+                Other Functionalities
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Drift Detectors -->
+        <li>
+          <a class="sidebar-toc-link sidebar-toc-label--user-category"
+             href="{{ pathto('for-users/drift-detectors/index') }}">
+            Drift Detectors
+          </a>
+        </li>
+
+      </ul>
     </li>
 
   </ul>
+</nav>
 
-</div>
+<script>
+(function () {
+  const buttons = document.querySelectorAll(
+    '#sidebar-toc .sidebar-toc-toggle'
+  );
+
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      const panelId = button.getAttribute('aria-controls');
+      const panel = document.getElementById(panelId);
+
+      if (!panel) return;
+
+      const isExpanded =
+        button.getAttribute('aria-expanded') === 'true';
+
+      button.setAttribute('aria-expanded', String(!isExpanded));
+      panel.hidden = isExpanded;
+
+      button.textContent = isExpanded ? '▸' : '▾';
+      button.title = isExpanded
+        ? 'Expand section'
+        : 'Collapse section';
+    });
+  });
+})();
+</script>
